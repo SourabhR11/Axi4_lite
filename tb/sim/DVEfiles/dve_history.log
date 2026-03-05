@@ -1,0 +1,101 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+gui_create_pref_category -category {schem_obj_name}
+gui_create_pref_key -category {schem_obj_name} -key {show_cell_and_pin_with_symbol_name} -value_type {bool} -value {false}
+gui_create_pref_key -category {schem_pin_hc} -key {textExtFont} -value_type {string} -value {Helvetica,10,-1,5,50,0,0,0,0,0}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file dump.vpd} {gui_open_db -file /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/dump.vpd -design V1} {gui_open_db -file /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/vcd.vpd.vpd -design V1} {gui_open_db -file vcd.vpd} {gui_open_db -file /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/vcd.vpd -design V1}}
+gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /home/sourabhrao/.synopsys_dve_default_layout.tcl}}
+gui_set_state_value -category Layout -key child_console_showstate -value maximized
+gui_set_state_value -category Layout -key child_console_size_x -value 1913
+gui_set_state_value -category Layout -key child_console_size_y -value 178
+gui_set_state_value -category Layout -key child_data_coltype -value 99
+gui_set_state_value -category Layout -key child_data_colvalue -value 99
+gui_set_state_value -category Layout -key child_data_colvariable -value 232
+gui_set_state_value -category Layout -key child_data_showstate -value maximized
+gui_set_state_value -category Layout -key child_data_size_x -value 438
+gui_set_state_value -category Layout -key child_data_size_y -value 788
+gui_set_state_value -category Layout -key child_driver_size_x -value 1515
+gui_set_state_value -category Layout -key child_driver_size_y -value 179
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colhier -value 111
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_coltype -value 54
+gui_set_state_value -category Layout -key child_hier_size_x -value 173
+gui_set_state_value -category Layout -key child_hier_size_y -value 788
+gui_set_state_value -category Layout -key child_list_down -value 193
+gui_set_state_value -category Layout -key child_list_right -value 444
+gui_set_state_value -category Layout -key child_schematic_docknewline -value false
+gui_set_state_value -category Layout -key child_schematic_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_schematic_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_schematic_size_x -value 1576
+gui_set_state_value -category Layout -key child_schematic_size_y -value 737
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_source_size_x -value 1305
+gui_set_state_value -category Layout -key child_source_size_y -value 783
+gui_set_state_value -category Layout -key child_watch_size_x -value 1053
+gui_set_state_value -category Layout -key child_watch_size_y -value 179
+gui_set_state_value -category Layout -key child_wave_colname -value 199
+gui_set_state_value -category Layout -key child_wave_colvalue -value 174
+gui_set_state_value -category Layout -key child_wave_docknewline -value false
+gui_set_state_value -category Layout -key child_wave_left -value 377
+gui_set_state_value -category Layout -key child_wave_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_wave_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_wave_right -value 918
+gui_set_state_value -category Layout -key child_wave_size_x -value 1305
+gui_set_state_value -category Layout -key child_wave_size_y -value 783
+gui_set_state_value -category Layout -key main_pos_x -value 3
+gui_set_state_value -category Layout -key main_pos_y -value 78
+gui_set_state_value -category Layout -key main_size_x -value 1916
+gui_set_state_value -category Layout -key main_size_y -value 1125
+gui_set_state_value -category Layout -key stand_list_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_list_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_list_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_list_child_size_x -value 604
+gui_set_state_value -category Layout -key stand_list_child_size_y -value 338
+gui_set_state_value -category Layout -key stand_list_top_pos_x -value 503
+gui_set_state_value -category Layout -key stand_list_top_pos_y -value 29
+gui_set_state_value -category Layout -key stand_list_top_size_x -value 1102
+gui_set_state_value -category Layout -key stand_list_top_size_y -value 528
+gui_set_state_value -category Layout -key stand_source_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_source_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_source_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_source_child_size_x -value 504
+gui_set_state_value -category Layout -key stand_source_child_size_y -value 238
+gui_set_state_value -category Layout -key stand_source_top_pos_x -value 553
+gui_set_state_value -category Layout -key stand_source_top_pos_y -value 479
+gui_set_state_value -category Layout -key stand_source_top_size_x -value 1052
+gui_set_state_value -category Layout -key stand_source_top_size_y -value 878
+gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 1150
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 311
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 43
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 78
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1902
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 1076
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_state_default_create -off
+
+# Begin command logging
+gui_open_db -file dump.vpd
+gui_wv_zoom_timerange -id  Wave.1 0 299
+gui_wv_zoom_timerange -id  Wave.1 0 299
+gui_list_expand -id  Hier.1   tb_top
+gui_list_select -id Hier.1 -current_item_name tb_top.axi_vif -current_item_type Scope  -selected  { tb_top.axi_vif   }
+gui_list_select -id Data.1 -selected  { {tb_top.axi_vif.wdata[31:0]}   }
+gui_list_select_all -id Data.1
+gui_list_add -id Wave.1 -from Data.1 { tb_top.axi_vif.assert_awvalid_stable tb_top.axi_vif.assert_wvalid_stable tb_top.axi_vif.assert_arvalid_stable tb_top.axi_vif.assert_bvalid_until_bready tb_top.axi_vif.assert_rvalid_until_rready tb_top.axi_vif.clk tb_top.axi_vif.rst_n {tb_top.axi_vif.awaddr[31:0]} tb_top.axi_vif.awvalid tb_top.axi_vif.awready {tb_top.axi_vif.wdata[31:0]} {tb_top.axi_vif.wstrb[3:0]} tb_top.axi_vif.wvalid tb_top.axi_vif.wready tb_top.axi_vif.bready tb_top.axi_vif.bvalid {tb_top.axi_vif.bresp[1:0]} {tb_top.axi_vif.araddr[31:0]} tb_top.axi_vif.arvalid tb_top.axi_vif.arready tb_top.axi_vif.rready {tb_top.axi_vif.rdata[31:0]} tb_top.axi_vif.rvalid {tb_top.axi_vif.rresp[1:0]} {tb_top.axi_vif.led_out[7:0]} {tb_top.axi_vif.sevenseg_out[7:0]} tb_top.axi_vif.irq_out {tb_top.axi_vif.$unit} } -insertionbar
+gui_marker_move -id  Wave.1 C1 90
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 58664 3292500
+gui_wv_zoom_timerange -id  Wave.1 100832 1584508
+gui_wv_zoom_timerange -id  Wave.1 115654 1092104
