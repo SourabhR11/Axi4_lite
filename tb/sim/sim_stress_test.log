@@ -1,7 +1,7 @@
-Command: /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/./simv +UVM_TESTNAME=stress_test +UVM_VERBOSITY=UVM_MEDIUM -l sim_stress_test.log +ntb_random_seed=1772693724
+Command: /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/./simv +UVM_TESTNAME=stress_test +UVM_VERBOSITY=UVM_MEDIUM -l sim_stress_test.log +ntb_random_seed=1772702050
 Chronologic VCS simulator copyright 1991-2020
 Contains Synopsys proprietary information.
-Compiler version Q-2020.03-SP2-8_Full64; Runtime version Q-2020.03-SP2-8_Full64;  Mar  5 12:25 2026
+Compiler version Q-2020.03-SP2-8_Full64; Runtime version Q-2020.03-SP2-8_Full64;  Mar  5 14:44 2026
 UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
 ----------------------------------------------------------------
 UVM-1.2.Synopsys
@@ -56,24 +56,30 @@ uvm_test_top               stress_test                 -     @342
         put_export         uvm_put_imp                 -     @607 
 ------------------------------------------------------------------
 
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/tests.sv(47) @ 0: uvm_test_top [stress_test] Applying reset
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/tests.sv(51) @ 95000: uvm_test_top [stress_test] Reset released
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/axi_driver.sv(57) @ 95000: uvm_test_top.tb_env.axi_agt.driver [axi_driver] Reset deasserted - ready to drive
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sequences.sv(312) @ 145000: uvm_test_top.tb_env.axi_agt.sequencer@@seq_0 [random_sequence] Starting random sequence with 66 transactions
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 245000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 385000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 525000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 635000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 795000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 975000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 1105000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(70) @ 1315000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000008c
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 1315000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 1545000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 1745000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
-UVM_WARNING /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/axi_monitor.sv(65) @ 2845000: uvm_test_top.tb_env.axi_agt.monitor [axi_monitor] Timeout waiting for WVALID/WREADY
-UVM_WARNING /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/axi_monitor.sv(80) @ 3845000: uvm_test_top.tb_env.axi_agt.monitor [axi_monitor] Timeout waiting for BVALID/BREADY
-UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 3845000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/tests.sv(49) @ 95000: uvm_test_top [stress_test] Applying reset
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/axi_driver.sv(38) @ 95000: uvm_test_top.tb_env.axi_agt.driver [axi_driver] Reset detected - resetting all signals
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/tests.sv(53) @ 195000: uvm_test_top [stress_test] Reset released
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/axi_driver.sv(57) @ 195000: uvm_test_top.tb_env.axi_agt.driver [axi_driver] Reset deasserted - ready to drive
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sequences.sv(312) @ 245000: uvm_test_top.tb_env.axi_agt.sequencer@@seq_0 [random_sequence] Starting random sequence with 95 transactions
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 365000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 625000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(70) @ 825000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000d000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 825000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 1005000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(70) @ 1125000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000c7e
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 1125000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(99) @ 1295000: uvm_test_top.tb_env.scb [scoreboard] REF: IRQ cleared (W1C)
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 1295000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(91) @ 1485000: uvm_test_top.tb_env.scb [scoreboard] REF: SEVENSEG_REG = 0x03df0000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 1485000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 1695000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(70) @ 1895000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0xcb000c7e
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 1895000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_ERROR @ 1905000: uvm_test_top.tb_env.axi_agt.sequencer@@seq_0 [uvm_test_top.tb_env.axi_agt.sequencer.seq_0] Response queue overflow, response was dropped
+UVM_WARNING /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/axi_monitor.sv(65) @ 2965000: uvm_test_top.tb_env.axi_agt.monitor [axi_monitor] Timeout waiting for WVALID/WREADY
+UVM_WARNING /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/axi_monitor.sv(80) @ 3965000: uvm_test_top.tb_env.axi_agt.monitor [axi_monitor] Timeout waiting for BVALID/BREADY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(91) @ 3965000: uvm_test_top.tb_env.scb [scoreboard] REF: SEVENSEG_REG = 0xcbdf0000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 3965000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
 UVM_FATAL /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/tb_top.sv(93) @ 1000000000: reporter [TIMEOUT] Simulation timeout - 1ms exceeded
 UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 1000000000: reporter [UVM/REPORT/CATCHER] 
 --- UVM Report catcher Summary ---
@@ -90,9 +96,9 @@ UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :   20
+UVM_INFO :   25
 UVM_WARNING :    2
-UVM_ERROR :    0
+UVM_ERROR :    1
 UVM_FATAL :    1
 ** Report counts by id
 [RNTST]     1
@@ -100,11 +106,12 @@ UVM_FATAL :    1
 [UVM/RELNOTES]     1
 [UVM/REPORT/CATCHER]     1
 [UVMTOP]     1
-[axi_driver]     1
+[axi_driver]     2
 [axi_monitor]     2
 [random_sequence]     1
-[scoreboard]    12
+[scoreboard]    16
 [stress_test]     2
+[uvm_test_top.tb_env.axi_agt.sequencer.seq_0]     1
 
 $finish called from file "/hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_root.svh", line 135.
 $finish at simulation time           1000000000
@@ -112,5 +119,5 @@ $finish at simulation time           1000000000
 "/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/axi_if.sv", 190: tb_top.axi_vif.assert_bvalid_until_bready: started at 999995000ps not finished
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 1000000000 ps
-CPU Time:      1.380 seconds;       Data structure size:   0.6Mb
-Thu Mar  5 12:25:29 2026
+CPU Time:      1.800 seconds;       Data structure size:   0.6Mb
+Thu Mar  5 14:44:25 2026

@@ -1,23 +1,23 @@
 # Begin_DVE_Session_Save_Info
 # DVE full session
-# Saved on Wed Mar 4 16:18:40 2026
+# Saved on Thu Mar 5 15:49:09 2026
 # Designs open: 1
-#   V1: /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/dump.vpd
+#   V1: /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/dump.vpd
 # Toplevel windows open: 1
 # 	TopLevel.1
 #   Source.1: tb_top
 #   Wave.1: 28 signals
-#   Wave.2: 42 signals
+#   Wave.2: 3 signals
 #   Group count = 2
-#   Group axi_vif signal count = 28
-#   Group Group2 signal count = 42
+#   Group Group1 signal count = 28
+#   Group Group2 signal count = 3
 # End_DVE_Session_Save_Info
 
 # DVE version: Q-2020.03-SP2-8_Full64
 # DVE build date: Sep 11 2021 20:47:44
 
 
-#<Session mode="Full" path="/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/DVEfiles/session.tcl" type="Debug">
+#<Session mode="Full" path="/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/DVEfiles/session.tcl" type="Debug">
 
 gui_set_loading_session_type Post
 gui_continuetime_set
@@ -175,8 +175,8 @@ gui_update_statusbar_target_frame ${TopLevel.1}
 
 # DVE Open design session: 
 
-if { ![gui_is_db_opened -db {/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/dump.vpd}] } {
-	gui_open_db -design V1 -file /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/dump.vpd -nosource
+if { ![gui_is_db_opened -db {/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/dump.vpd}] } {
+	gui_open_db -design V1 -file /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/dump.vpd -nosource
 }
 gui_set_precision 1ps
 gui_set_time_units 1ps
@@ -194,39 +194,20 @@ gui_set_time_units 1ps
 # Global: Signal Compare
 
 # Global: Signal Groups
-gui_load_child_values {tb_top.dut}
 gui_load_child_values {tb_top.axi_vif}
 
 
-set _session_group_1 axi_vif
+set _session_group_1 Group1
 gui_sg_create "$_session_group_1"
-set axi_vif "$_session_group_1"
+set Group1 "$_session_group_1"
 
-gui_sg_addsignal -group "$_session_group_1" { tb_top.axi_vif.assert_bvalid_until_bready tb_top.axi_vif.assert_awvalid_stable tb_top.axi_vif.assert_rvalid_until_rready tb_top.axi_vif.assert_wvalid_stable tb_top.axi_vif.assert_arvalid_stable tb_top.axi_vif.wvalid tb_top.axi_vif.irq_out tb_top.axi_vif.rdata tb_top.axi_vif.arready tb_top.axi_vif.araddr tb_top.axi_vif.bvalid tb_top.axi_vif.sevenseg_out tb_top.axi_vif.arvalid tb_top.axi_vif.awready tb_top.axi_vif.rready tb_top.axi_vif.wstrb tb_top.axi_vif.rresp tb_top.axi_vif.clk tb_top.axi_vif.awvalid tb_top.axi_vif.rst_n tb_top.axi_vif.wdata tb_top.axi_vif.awaddr tb_top.axi_vif.rvalid tb_top.axi_vif.wready {tb_top.axi_vif.$unit} tb_top.axi_vif.bresp tb_top.axi_vif.bready tb_top.axi_vif.led_out }
+gui_sg_addsignal -group "$_session_group_1" { tb_top.axi_vif.assert_awvalid_stable tb_top.axi_vif.assert_wvalid_stable tb_top.axi_vif.assert_arvalid_stable tb_top.axi_vif.assert_bvalid_until_bready tb_top.axi_vif.assert_rvalid_until_rready tb_top.axi_vif.clk tb_top.axi_vif.rst_n tb_top.axi_vif.awaddr tb_top.axi_vif.awvalid tb_top.axi_vif.awready tb_top.axi_vif.wdata tb_top.axi_vif.wstrb tb_top.axi_vif.wvalid tb_top.axi_vif.wready tb_top.axi_vif.bready tb_top.axi_vif.bvalid tb_top.axi_vif.bresp tb_top.axi_vif.araddr tb_top.axi_vif.arvalid tb_top.axi_vif.arready tb_top.axi_vif.rready tb_top.axi_vif.rdata tb_top.axi_vif.rvalid tb_top.axi_vif.rresp tb_top.axi_vif.led_out tb_top.axi_vif.sevenseg_out tb_top.axi_vif.irq_out {tb_top.axi_vif.$unit} }
 
 set _session_group_2 Group2
 gui_sg_create "$_session_group_2"
 set Group2 "$_session_group_2"
 
-gui_sg_addsignal -group "$_session_group_2" { tb_top.dut.ACLK tb_top.dut.ARESETn tb_top.dut.S_AWADDR tb_top.dut.S_AWVALID tb_top.dut.S_AWREADY tb_top.dut.S_WDATA tb_top.dut.S_WSTRB tb_top.dut.S_WVALID tb_top.dut.S_WREADY tb_top.dut.S_BREADY tb_top.dut.S_BVALID tb_top.dut.S_BRESP tb_top.dut.S_ARADDR tb_top.dut.S_ARVALID tb_top.dut.S_ARREADY tb_top.dut.S_RREADY tb_top.dut.S_RDATA tb_top.dut.S_RVALID tb_top.dut.S_RRESP tb_top.dut.LED_OUT tb_top.dut.SEVENSEG_OUT tb_top.dut.IRQ_OUT tb_top.dut.led_reg tb_top.dut.sevenseg_reg tb_top.dut.irq_status_reg tb_top.dut.led_prev tb_top.dut.write_addr_reg tb_top.dut.read_addr_reg tb_top.dut.w_state tb_top.dut.w_next tb_top.dut.r_state tb_top.dut.r_next tb_top.dut.ADDRESS tb_top.dut.DATA_WIDTH tb_top.dut.W_IDLE tb_top.dut.W_ADDR tb_top.dut.W_DATA tb_top.dut.W_RESP tb_top.dut.R_IDLE tb_top.dut.R_ADDR tb_top.dut.R_DATA {tb_top.dut.$unit} }
-gui_set_radix -radix {decimal} -signals {V1:tb_top.dut.ADDRESS}
-gui_set_radix -radix {twosComplement} -signals {V1:tb_top.dut.ADDRESS}
-gui_set_radix -radix {decimal} -signals {V1:tb_top.dut.DATA_WIDTH}
-gui_set_radix -radix {twosComplement} -signals {V1:tb_top.dut.DATA_WIDTH}
-gui_set_radix -radix {decimal} -signals {V1:tb_top.dut.W_IDLE}
-gui_set_radix -radix {unsigned} -signals {V1:tb_top.dut.W_IDLE}
-gui_set_radix -radix {decimal} -signals {V1:tb_top.dut.W_ADDR}
-gui_set_radix -radix {unsigned} -signals {V1:tb_top.dut.W_ADDR}
-gui_set_radix -radix {decimal} -signals {V1:tb_top.dut.W_DATA}
-gui_set_radix -radix {unsigned} -signals {V1:tb_top.dut.W_DATA}
-gui_set_radix -radix {decimal} -signals {V1:tb_top.dut.W_RESP}
-gui_set_radix -radix {unsigned} -signals {V1:tb_top.dut.W_RESP}
-gui_set_radix -radix {decimal} -signals {V1:tb_top.dut.R_IDLE}
-gui_set_radix -radix {unsigned} -signals {V1:tb_top.dut.R_IDLE}
-gui_set_radix -radix {decimal} -signals {V1:tb_top.dut.R_ADDR}
-gui_set_radix -radix {unsigned} -signals {V1:tb_top.dut.R_ADDR}
-gui_set_radix -radix {decimal} -signals {V1:tb_top.dut.R_DATA}
-gui_set_radix -radix {unsigned} -signals {V1:tb_top.dut.R_DATA}
+gui_sg_addsignal -group "$_session_group_2" { tb_top.dut.SEVENSEG_OUT tb_top.dut.sevenseg_reg tb_top.dut.write_addr_reg }
 
 # Global: Highlighting
 
@@ -236,7 +217,7 @@ gui_change_stack_mode -mode list
 # Post database loading setting...
 
 # Restore C1 time
-gui_set_time -C1_only 98
+gui_set_time -C1_only 1827152
 
 
 
@@ -271,7 +252,7 @@ gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linka
 gui_list_set_filter -id ${Data.1} -text {*}
 gui_list_show_data -id ${Data.1} {tb_top.dut}
 gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {tb_top.dut.ACLK tb_top.dut.ARESETn tb_top.dut.S_AWADDR tb_top.dut.S_AWVALID tb_top.dut.S_AWREADY tb_top.dut.S_WDATA tb_top.dut.S_WSTRB tb_top.dut.S_WVALID tb_top.dut.S_WREADY tb_top.dut.S_BREADY tb_top.dut.S_BVALID tb_top.dut.S_BRESP tb_top.dut.S_ARADDR tb_top.dut.S_ARVALID tb_top.dut.S_ARREADY tb_top.dut.S_RREADY tb_top.dut.S_RDATA tb_top.dut.S_RVALID tb_top.dut.S_RRESP tb_top.dut.LED_OUT tb_top.dut.SEVENSEG_OUT tb_top.dut.IRQ_OUT tb_top.dut.led_reg tb_top.dut.sevenseg_reg tb_top.dut.irq_status_reg tb_top.dut.led_prev tb_top.dut.write_addr_reg tb_top.dut.read_addr_reg tb_top.dut.w_state tb_top.dut.w_next tb_top.dut.r_state tb_top.dut.r_next tb_top.dut.ADDRESS tb_top.dut.DATA_WIDTH tb_top.dut.W_IDLE tb_top.dut.W_ADDR tb_top.dut.W_DATA tb_top.dut.W_RESP tb_top.dut.R_IDLE tb_top.dut.R_ADDR tb_top.dut.R_DATA {tb_top.dut.$unit} }}
+catch { gui_list_select -id ${Data.1} {tb_top.dut.SEVENSEG_OUT tb_top.dut.sevenseg_reg tb_top.dut.write_addr_reg }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0
@@ -293,8 +274,9 @@ gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
 gui_marker_set_ref -id ${Wave.1}  C1
-gui_wv_zoom_timerange -id ${Wave.1} 167374 628422
-gui_list_add_group -id ${Wave.1} -after {New Group} {axi_vif}
+gui_wv_zoom_timerange -id ${Wave.1} 1647688 2444470
+gui_list_add_group -id ${Wave.1} -after {New Group} {Group1}
+gui_list_select -id ${Wave.1} {tb_top.axi_vif.wready }
 gui_seek_criteria -id ${Wave.1} {Any Edge}
 
 
@@ -308,10 +290,10 @@ if { $groupExD } {
 }
 gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Wave.1} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.1} -group axi_vif  -position in
+gui_list_set_insertion_bar  -id ${Wave.1} -group Group1  -position in
 
-gui_marker_move -id ${Wave.1} {C1} 98
-gui_view_scroll -id ${Wave.1} -vertical -set 0
+gui_marker_move -id ${Wave.1} {C1} 1827152
+gui_view_scroll -id ${Wave.1} -vertical -set 77
 gui_show_grid -id ${Wave.1} -enable false
 
 # View 'Wave.2'
@@ -323,7 +305,7 @@ gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
 gui_marker_set_ref -id ${Wave.2}  C1
-gui_wv_zoom_timerange -id ${Wave.2} 126535 910179
+gui_wv_zoom_timerange -id ${Wave.2} 401321 3331290
 gui_list_add_group -id ${Wave.2} -after {New Group} {Group2}
 gui_seek_criteria -id ${Wave.2} {Any Edge}
 
@@ -342,7 +324,7 @@ gui_list_set_filter -id ${Wave.2} -list { {Buffer 1} {Input 1} {Others 1} {Linka
 gui_list_set_filter -id ${Wave.2} -text {*}
 gui_list_set_insertion_bar  -id ${Wave.2} -group Group2  -position in
 
-gui_marker_move -id ${Wave.2} {C1} 98
+gui_marker_move -id ${Wave.2} {C1} 1827152
 gui_view_scroll -id ${Wave.2} -vertical -set 0
 gui_show_grid -id ${Wave.2} -enable false
 # Restore toplevel window zorder

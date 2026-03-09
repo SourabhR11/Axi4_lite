@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	compile.log
-pDaiDir                            	/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/simv.daidir
+pDaiDir                            	/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/simv.daidir
 destPath                           	csrc/
 fSharedMaster                      	0
 fHsimPCSharedLibSpecified          	0

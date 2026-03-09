@@ -1,0 +1,133 @@
+Command: /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/./simv +UVM_TESTNAME=addr_out_of_range_test +UVM_VERBOSITY=UVM_MEDIUM -l sim_addr_out_of_range_test.log +ntb_random_seed=1772703295
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version Q-2020.03-SP2-8_Full64; Runtime version Q-2020.03-SP2-8_Full64;  Mar  5 15:04 2026
+UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+VCD+ Writer Q-2020.03-SP2-8_Full64 Copyright (c) 1991-2020 by Synopsys Inc.
+UVM_INFO @ 0: reporter [RNTST] Running test addr_out_of_range_test...
+UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+------------------------------------------------------------------
+Name                       Type                        Size  Value
+------------------------------------------------------------------
+uvm_test_top               addr_out_of_range_test      -     @342 
+  tb_env                   env                         -     @358 
+    axi_agt                axi_agent                   -     @367 
+      driver               axi_driver                  -     @414 
+        rsp_port           uvm_analysis_port           -     @433 
+        seq_item_port      uvm_seq_item_pull_port      -     @423 
+      monitor              axi_monitor                 -     @405 
+        analysis_port      uvm_analysis_port           -     @582 
+      sequencer            axi_sequencer               -     @443 
+        rsp_export         uvm_analysis_export         -     @452 
+        seq_item_export    uvm_seq_item_pull_imp       -     @570 
+        arbitration_queue  array                       0     -    
+        lock_queue         array                       0     -    
+        num_last_reqs      integral                    32    'd1  
+        num_last_rsps      integral                    32    'd1  
+    cov                    coverage_collector          -     @385 
+      analysis_imp         uvm_analysis_imp            -     @394 
+    scb                    scoreboard                  -     @376 
+      axi_fifo             uvm_tlm_analysis_fifo #(T)  -     @598 
+        analysis_export    uvm_analysis_imp            -     @647 
+        get_ap             uvm_analysis_port           -     @637 
+        get_peek_export    uvm_get_peek_imp            -     @617 
+        put_ap             uvm_analysis_port           -     @627 
+        put_export         uvm_put_imp                 -     @607 
+------------------------------------------------------------------
+
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/tests.sv(49) @ 95000: uvm_test_top [addr_out_of_range_test] Applying reset
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/axi_driver.sv(38) @ 95000: uvm_test_top.tb_env.axi_agt.driver [axi_driver] Reset detected - resetting all signals
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/tests.sv(53) @ 195000: uvm_test_top [addr_out_of_range_test] Reset released
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/axi_driver.sv(57) @ 195000: uvm_test_top.tb_env.axi_agt.driver [axi_driver] Reset deasserted - ready to drive
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sequences.sv(505) @ 245000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [addr_out_of_range_sequence] Starting addr_out_of_range_sequence
+UVM_WARNING /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(106) @ 315000: uvm_test_top.tb_env.scb [scoreboard] Write to invalid address: 0x20
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 315000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 425000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0xdeadbeef, Exp=0xdeadbeef
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sequences.sv(518) @ 435000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [addr_out_of_range_sequence] Addr=0x20 correctly returned DEADBEEF
+UVM_WARNING /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(106) @ 505000: uvm_test_top.tb_env.scb [scoreboard] Write to invalid address: 0x30
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 505000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 615000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0xdeadbeef, Exp=0xdeadbeef
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sequences.sv(518) @ 625000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [addr_out_of_range_sequence] Addr=0x30 correctly returned DEADBEEF
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(91) @ 695000: uvm_test_top.tb_env.scb [scoreboard] REF: SEVENSEG_REG = 0xb9f84dbd
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(115) @ 695000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(135) @ 805000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0xb9f84dbd, Exp=0xb9f84dbd
+UVM_ERROR /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sequences.sv(514) @ 815000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [addr_out_of_range_sequence] Addr=0x44 returned 0xb9f84dbd, expected DEADBEEF
+UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 5815000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(159) @ 5815000: uvm_test_top.tb_env.scb [scoreboard] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(160) @ 5815000: uvm_test_top.tb_env.scb [scoreboard]     SCOREBOARD FINAL REPORT
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(161) @ 5815000: uvm_test_top.tb_env.scb [scoreboard] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(162) @ 5815000: uvm_test_top.tb_env.scb [scoreboard] Total Transactions: 6
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(163) @ 5815000: uvm_test_top.tb_env.scb [scoreboard] Passed Checks:      6
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(164) @ 5815000: uvm_test_top.tb_env.scb [scoreboard] Failed Checks:      0
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(167) @ 5815000: uvm_test_top.tb_env.scb [scoreboard] *** TEST PASSED ***
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv(171) @ 5815000: uvm_test_top.tb_env.scb [scoreboard] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(209) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(210) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector]     FUNCTIONAL COVERAGE REPORT
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(211) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(212) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector] Register Access Coverage:  33.33%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(213) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector] WSTRB Coverage:            4.76%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(214) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector] LED Pattern Coverage:      0.00%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(215) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector] Seven-Segment Coverage:    0.00%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(216) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector] IRQ Coverage:              0.00%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(217) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector] Response Coverage:         50.00%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(218) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(219) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector] TOTAL COVERAGE:            14.68%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv(220) @ 5815000: uvm_test_top.tb_env.cov [coverage_collector] ========================================
+UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 5815000: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_report_server.svh(894) @ 5815000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   39
+UVM_WARNING :    2
+UVM_ERROR :    1
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+[addr_out_of_range_sequence]     4
+[addr_out_of_range_test]     2
+[axi_driver]     2
+[coverage_collector]    12
+[scoreboard]    17
+
+$finish called from file "/hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time              5815000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 5815000 ps
+CPU Time:      0.880 seconds;       Data structure size:   0.6Mb
+Thu Mar  5 15:04:57 2026

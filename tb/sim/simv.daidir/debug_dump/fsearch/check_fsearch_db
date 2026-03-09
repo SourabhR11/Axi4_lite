@@ -1,6 +1,6 @@
 #!/bin/sh -h 
 
-FILE_PATH="/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/simv.daidir/debug_dump/fsearch"
+FILE_PATH="/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/simv.daidir/debug_dump/fsearch"
 lockfile="${FILE_PATH}"/lock
 
 FSearch_lock_release() {
@@ -32,13 +32,13 @@ if [ -d "$dir_name"/../../../../../../../../../.. ]; then
     cd "$dir_name"/../../../../../../../../../..
 fi
 
-if [ -f "/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/simv.daidir/debug_dump/fsearch/.create_fsearch_db" ]; then
-    if [ ! -f "/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/simv.daidir/debug_dump/fsearch/fsearch.db" ]; then
+if [ -f "/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/simv.daidir/debug_dump/fsearch/.create_fsearch_db" ]; then
+    if [ ! -f "/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/simv.daidir/debug_dump/fsearch/fsearch.db" ]; then
         if [ "$#" -eq 1 ] && [ "x$1" == "x-background" ]; then
             trap FSearch_lock_release EXIT
             (
                 flock 193
-                create_fsearch_db_ctrl "/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
+                create_fsearch_db_ctrl "/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
                 exit 193
             ) 193> "$lockfile"
             rstat=$?
@@ -46,12 +46,12 @@ if [ -f "/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/simv.daidir/deb
                 exit $rstat
             fi
         else
-            "/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
-            if [ -f "/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
-               rm -f "/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/simv.daidir/debug_dump/fsearch/fsearch.stat"
+            "/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
+            if [ -f "/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
+               rm -f "/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/simv.daidir/debug_dump/fsearch/fsearch.stat"
             fi
         fi
-    elif [ -f "/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
-       rm -f "/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/simv.daidir/debug_dump/fsearch/fsearch.stat"
+    elif [ -f "/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
+       rm -f "/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/simv.daidir/debug_dump/fsearch/fsearch.stat"
     fi
 fi

@@ -3,7 +3,7 @@ uvm-1.2 +vcs+lic+wait -l compile.log /hwetools/work_area/frontend/sourabhrao/Axi
 /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/axi_if.sv /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/tb_pkg.sv \
 /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/tb_top.sv
                          Chronologic VCS (TM)
-      Version Q-2020.03-SP2-8_Full64 -- Thu Mar  5 12:38:43 2026
+      Version Q-2020.03-SP2-8_Full64 -- Mon Mar  9 15:20:21 2026
                Copyright (c) 1991-2020 by Synopsys Inc.
                          ALL RIGHTS RESERVED
 
@@ -389,7 +389,7 @@ Starting vcs inline pass...
 10 modules and 0 UDP read.
 recompiling module uvm_custom_install_verdi_recording
 	However, due to incremental compilation, only 1 module needs to be compiled. 
-make[1]: Entering directory `/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/csrc' \
+make[1]: Entering directory `/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/csrc' \
 
 rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 ld -shared  -Bsymbolic   -o .//../simv.daidir//_cuarc0.so objs/amcQw_d.o 
@@ -397,7 +397,7 @@ rm -f _cuarc0.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
 g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
 -Wl,-rpath=/hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib -L/hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib \
--Wl,-rpath-link=./  /usr/lib64/libnuma.so.1 uvm_dpi.o uvm_verdi_dpi.o     _7166_archive_1.so \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1 uvm_dpi.o uvm_verdi_dpi.o     _31549_archive_1.so \
 _prev_archive_1.so _cuarc0.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o \
 rmar_llvm_0_1.o rmar_llvm_0_0.o          -lvirsim -lerrorinf -lsnpsmalloc -lvfs  \
 -lvcsnew -lsimprofile -luclinative /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/vcs_tls.o \
@@ -406,7 +406,7 @@ _vcs_pli_stub_.o   /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64
 /hwetools/synosys/installed_tools/verdi/Q-2020.03-SP2-8/share/PLI/VCS/LINUX64/pli.a \
 -ldl  -lc -lm -lpthread -ldl 
 ../simv up to date
-make[1]: Leaving directory `/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim/csrc' \
+make[1]: Leaving directory `/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/csrc' \
 
-CPU time: 15.828 seconds to compile + .530 seconds to elab + .874 seconds to link
+CPU time: 15.199 seconds to compile + .466 seconds to elab + .761 seconds to link
 Verdi KDB elaboration done and the database successfully generated: 0 error(s), 0 warning(s)

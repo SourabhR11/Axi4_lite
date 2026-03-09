@@ -1,7 +1,7 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sim
+COMPILE_PATH=/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim
 VERDI_HOME=/hwetools/synosys/installed_tools/verdi/Q-2020.03-SP2-8
 SystemC=FALSE
 UUM=FALSE

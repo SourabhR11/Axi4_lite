@@ -39,8 +39,8 @@ gui_set_state_value -category Layout -key child_source_size_x -value 1305
 gui_set_state_value -category Layout -key child_source_size_y -value 783
 gui_set_state_value -category Layout -key child_watch_size_x -value 1053
 gui_set_state_value -category Layout -key child_watch_size_y -value 179
-gui_set_state_value -category Layout -key child_wave_colname -value 199
-gui_set_state_value -category Layout -key child_wave_colvalue -value 174
+gui_set_state_value -category Layout -key child_wave_colname -value 186
+gui_set_state_value -category Layout -key child_wave_colvalue -value 187
 gui_set_state_value -category Layout -key child_wave_docknewline -value false
 gui_set_state_value -category Layout -key child_wave_left -value 377
 gui_set_state_value -category Layout -key child_wave_pos_x -value {-2}
@@ -91,11 +91,34 @@ gui_wv_zoom_timerange -id  Wave.1 0 299
 gui_wv_zoom_timerange -id  Wave.1 0 299
 gui_list_expand -id  Hier.1   tb_top
 gui_list_select -id Hier.1 -current_item_name tb_top.axi_vif -current_item_type Scope  -selected  { tb_top.axi_vif   }
-gui_list_select -id Data.1 -selected  { {tb_top.axi_vif.wdata[31:0]}   }
+gui_list_select -id Data.1 -selected  { tb_top.axi_vif.wvalid   }
 gui_list_select_all -id Data.1
 gui_list_add -id Wave.1 -from Data.1 { tb_top.axi_vif.assert_awvalid_stable tb_top.axi_vif.assert_wvalid_stable tb_top.axi_vif.assert_arvalid_stable tb_top.axi_vif.assert_bvalid_until_bready tb_top.axi_vif.assert_rvalid_until_rready tb_top.axi_vif.clk tb_top.axi_vif.rst_n {tb_top.axi_vif.awaddr[31:0]} tb_top.axi_vif.awvalid tb_top.axi_vif.awready {tb_top.axi_vif.wdata[31:0]} {tb_top.axi_vif.wstrb[3:0]} tb_top.axi_vif.wvalid tb_top.axi_vif.wready tb_top.axi_vif.bready tb_top.axi_vif.bvalid {tb_top.axi_vif.bresp[1:0]} {tb_top.axi_vif.araddr[31:0]} tb_top.axi_vif.arvalid tb_top.axi_vif.arready tb_top.axi_vif.rready {tb_top.axi_vif.rdata[31:0]} tb_top.axi_vif.rvalid {tb_top.axi_vif.rresp[1:0]} {tb_top.axi_vif.led_out[7:0]} {tb_top.axi_vif.sevenseg_out[7:0]} tb_top.axi_vif.irq_out {tb_top.axi_vif.$unit} } -insertionbar
-gui_marker_move -id  Wave.1 C1 90
+gui_list_select -id Wave.1 -selected  { tb_top.axi_vif.wready   }
+gui_marker_move -id  Wave.1 C1 77
 gui_zoom -window Wave.1 -full
-gui_wv_zoom_timerange -id  Wave.1 58664 3292500
-gui_wv_zoom_timerange -id  Wave.1 100832 1584508
-gui_wv_zoom_timerange -id  Wave.1 115654 1092104
+gui_wv_zoom_timerange -id  Wave.1 90657 1677155
+gui_wv_zoom_timerange -id  Wave.1 114836 911618
+gui_list_select -id Data.1 -selected  { tb_top.dut.S_ARVALID   }
+gui_list_select_all -id Data.1
+gui_list_select -id Hier.1 -current_item_name tb_top.dut -current_item_type Scope  -selected  {  }
+gui_list_select -id Hier.1 -current_item_name tb_top.dut -current_item_type Scope  -selected  { tb_top.dut   }
+gui_list_select -id Data.1 -selected  { tb_top.dut.S_WVALID   }
+gui_list_select -id Data.1 -selected  { tb_top.dut.S_WVALID  {tb_top.dut.SEVENSEG_OUT[7:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_top.dut.SEVENSEG_OUT[7:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_top.dut.SEVENSEG_OUT[7:0]}  {tb_top.dut.sevenseg_reg[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_top.dut.sevenseg_reg[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_top.dut.sevenseg_reg[31:0]}  {tb_top.dut.SEVENSEG_OUT[7:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_top.dut.sevenseg_reg[31:0]}  {tb_top.dut.SEVENSEG_OUT[7:0]}  {tb_top.dut.write_addr_reg[31:0]}   }
+gui_open_window Wave
+gui_list_add -id Wave.2 -from Data.1 { {tb_top.dut.SEVENSEG_OUT[7:0]} {tb_top.dut.sevenseg_reg[31:0]} {tb_top.dut.write_addr_reg[31:0]} } -insertionbar
+gui_marker_move -id  Wave.2 C1 163
+gui_zoom -window Wave.2 -full
+gui_reparent_window -window {Wave.2} -parent {TopLevel.1}
+gui_list_set_filter -id Wave.2 -text {*}
+gui_close_window -window TopLevel.2
+gui_wv_zoom_timerange -id  Wave.2 399950 3329919
+gui_wv_zoom_timerange -id  Wave.2 1677065 2505809
+gui_view_port_history -window Wave.2 -previous
+gui_marker_move -id  Wave.2 C1 2045758
+gui_marker_move -id  Wave.2 C1 1827152

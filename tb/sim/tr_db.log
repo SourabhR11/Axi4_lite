@@ -29,3 +29,8 @@
   CREATE_STREAM @145000 {NAME:seq_0 T:Transactions SCOPE:uvm_test_top.tb_env.axi_agt.sequencer STREAM:707}
   CREATE_STREAM @145000 {NAME:seq T:Transactions SCOPE:uvm_test_top.tb_env.axi_agt.sequencer STREAM:707}
   CREATE_STREAM @145000 {NAME:seq T:Transactions SCOPE:uvm_test_top.tb_env.axi_agt.sequencer STREAM:707}
+  CREATE_STREAM @245000 {NAME:seq_0 T:Transactions SCOPE:uvm_test_top.tb_env.axi_agt.sequencer STREAM:709}
+  CREATE_STREAM @245000 {NAME:seq T:Transactions SCOPE:uvm_test_top.tb_env.axi_agt.sequencer STREAM:709}
+  CREATE_STREAM @245000 {NAME:seq T:Transactions SCOPE:uvm_test_top.tb_env.axi_agt.sequencer STREAM:709}
+  CREATE_STREAM @245000 {NAME:seq T:Transactions SCOPE:uvm_test_top.tb_env.axi_agt.sequencer STREAM:709}
+  CREATE_STREAM @245000 {NAME:seq T:Transactions SCOPE:uvm_test_top.tb_env.axi_agt.sequencer STREAM:709}
