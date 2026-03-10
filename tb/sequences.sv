@@ -14,23 +14,24 @@ class base_sequence extends uvm_sequence #(axi_transaction);
     
     // Helper task for write
     task write_reg(bit [31:0] addr, bit [31:0] data, bit [3:0] strb = 4'b1111);
-        axi_transaction trans;
+        axi_transaction trans,rsp;
         trans = axi_transaction::type_id::create("trans");
         start_item(trans);
         trans.set_write_trans(addr, data, strb);
         finish_item(trans);
+        get_response(rsp);
     endtask
     
     // Helper task for read
     task read_reg(bit [31:0] addr, output bit [31:0] data);
-        axi_transaction trans;
+       // axi_transaction trans;
+        axi_transaction trans,rsp;
         trans = axi_transaction::type_id::create("trans");
         start_item(trans);
         trans.set_read_trans(addr);
         finish_item(trans);
-	//MS:: Commenting below get_response(trans) method because it is causing the timeout issue.
-        //get_response(trans);
-        data = trans.read_data;
+        get_response(rsp);
+        data = rsp.read_data;
     endtask
     
 endclass : base_sequence
@@ -297,7 +298,7 @@ class random_sequence extends base_sequence;
     rand int num_transactions;
     
     constraint c_num_trans {
-      num_transactions inside {[50:100]};
+        num_transactions inside {[50:100]};
     }
     
     function new(string name = "random_sequence");
@@ -307,7 +308,6 @@ class random_sequence extends base_sequence;
     virtual task body();
         axi_transaction trans;
         bit [31:0] read_data;
-	int delay;
         
         `uvm_info(get_type_name(), 
                  $sformatf("Starting random sequence with %0d transactions", num_transactions), 
@@ -318,13 +318,12 @@ class random_sequence extends base_sequence;
             start_item(trans);
             assert(trans.randomize());
             finish_item(trans);
-           
-	    //MS:: Commented below logic to skip timeout fatal error, because get_response(trans) is causing this timeout.
-            //if (trans.trans_type == axi_transaction::READ) begin
-            //    get_response(trans);
-            //end
-            delay = $urandom_range(10, 50);
-	    #delay;
+            
+            if (trans.trans_type == axi_transaction::READ) begin
+                get_response(rsp);
+            end
+            
+            #($urandom_range(10, 50));
         end
     endtask
     
@@ -353,7 +352,7 @@ class concurrent_rw_sequence extends base_sequence;
             end
             begin
                 // Read operations
-                bit [31:0] data;
+                bit[31:0] data;
                 for (int i = 0; i < 10; i++) begin
                     read_reg(32'h4, data);
                     #($urandom_range(20, 50));

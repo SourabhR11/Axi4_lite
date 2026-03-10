@@ -717,7 +717,7 @@ MGLS_HOME=/tools/mentor/questasim/questasim/linux/mgls
 MFLAGS=
 MAKEOVERRIDES=${-*-command-variables-*-}
 MAKELEVEL=1
-MAKEFLAGS=TEST=concurrent_test
+MAKEFLAGS=TEST=protocol_test
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LC_ALL=en_US.utf-8
 ICC_HOME=/hwetools/synosys/installed_tools/icc2/Q-2019.12-SP1
@@ -737,8 +737,8 @@ DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ogHHrZEvHJ,guid=acae1cb66d97f3b
 COLORTERM=truecolor
 0
 180
-1772701486 /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/tests.sv
-1772701452 /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sequences.sv
+1772701418 /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/tests.sv
+1772701411 /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/sequences.sv
 1771323179 /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/env.sv
 1770913934 /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv
 1771323749 /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/scoreboard.sv
@@ -924,5 +924,5 @@ COLORTERM=truecolor
 1631416743 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/liberrorinf.so
 1631416702 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libsnpsmalloc.so
 1631416739 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libvfs.so
-1773049839 simv.daidir
+1773124173 simv.daidir
 -1 partitionlib
