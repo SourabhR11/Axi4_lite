@@ -1,7 +1,7 @@
 global coverage_group 0 tb_pkg::coverage_collector::cg_register_access __coverage_coverage_collector.cg_register_access unused_coverage_collector_cg_register_access_loop_label tb_pkg 0 1 0 0 0  ( 0 
 )
  1 1
- 63 /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb/coverage.sv
+ 64 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv
  27 0 0 0 1 0 0 0 0  1
 0
 0 0

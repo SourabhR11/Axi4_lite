@@ -19,8 +19,9 @@ PRODUCT_TIMESTAMP=product_timestamp
 # Path to runtime library
 DEPLIBS=
 VCSUCLI=-lvcsucli
+BALIBS= 
 LLVM_FLAGS=
-RUNTIME=-lvcsnew -lsimprofile -luclinative /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/vcs_tls.o $(DEPLIBS) 
+RUNTIME=-lvcsnew -lsimprofile -lreader_common /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libBA.a -luclinative /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/vcs_tls.o $(DEPLIBS) 
 
 VCS_SAVE_RESTORE_OBJ=/hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/vcs_save_restore_new.o
 
@@ -113,6 +114,6 @@ $(PRODUCT_TIMESTAMP) : product_clean_order
 	@touch $(PRODUCT_TIMESTAMP)
 	@-if [ -d ./objs ]; then find ./objs -type d -empty -delete; fi
 
-$(PRODUCT) :  $(LD_VERSION_CHECK)  $(OBJS) $(DOTLIBS) $(DPI_STUB_OBJS) $(PLI_STUB_OBJS) $(CMODLIB)  /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libvcsnew.so /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libsimprofile.so /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libuclinative.so /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/vcs_tls.o /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libvcsucli.so  $(VCS_SAVE_RESTORE_OBJ) 
+$(PRODUCT) :  $(LD_VERSION_CHECK)  $(OBJS) $(DOTLIBS) $(DPI_STUB_OBJS) $(PLI_STUB_OBJS) $(CMODLIB)  /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libvcsnew.so /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libsimprofile.so /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libreader_common.so /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libBA.a /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libuclinative.so /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/vcs_tls.o /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libvcsucli.so  $(VCS_SAVE_RESTORE_OBJ) 
 	@touch $(PRODUCT)
 

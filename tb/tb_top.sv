@@ -84,7 +84,7 @@ module tb_top;
      // $fsdbDumpvars(0,tb_top);
         
         // Run test
-        run_test();
+        run_test("led_irq_test");
     end
     
     // Timeout watchdog

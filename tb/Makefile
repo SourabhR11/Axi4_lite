@@ -6,9 +6,9 @@
 SIM ?= VCS
 
 # Directories
-RTL_DIR = /hwetools/work_area/frontend/sourabhrao/Axi4lite/rtl
-TB_DIR = /hwetools/work_area/frontend/sourabhrao/Axi4lite/tb
-SIM_DIR = ./sim
+RTL_DIR = /hwetools/work_area/frontend/sourabhrao/Axi4_lite/rtl
+TB_DIR = /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb
+SIM_DIR = /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim
 
 # RTL Files
 RTL_FILES = $(RTL_DIR)/axi_ledseg_irq.v
@@ -30,6 +30,7 @@ SEED ?= $(shell date +%s)
 # VCS Options
 #------------------------------------------------------------------------------
 VCS = vcs
+
 VCS_OPTS = -sverilog \
            -timescale=1ns/1ps \
            -full64 \
@@ -38,26 +39,32 @@ VCS_OPTS = -sverilog \
            -lca \
            -ntb_opts uvm-1.2 \
            +vcs+lic+wait \
+           -cm line+cond+fsm+tgl+branch+assert \
+           -cm_dir coverage \
            -l compile.log
 
 VCS_RUN_OPTS = +UVM_TESTNAME=$(TEST) \
                +UVM_VERBOSITY=$(UVM_VERBOSITY) \
-               -l sim_$(TEST).log \
-               +ntb_random_seed=$(SEED)
+               +ntb_random_seed=$(SEED) \
+               -cm_name $(TEST)_coverage \
+               -cm_dir coverage \
+               -l sim_$(TEST).log
 
 #------------------------------------------------------------------------------
 # Questa Options
 #------------------------------------------------------------------------------
-QUESTA = vlog
+QUESTA = vlib work; vlog
 QUESTA_OPTS = -sv \
               -timescale 1ns/1ps \
               +acc \
-            ##  -L $(QUESTA_UVM_HOME) \
+              +cover \
+              +fcover \
               -l compile.log
 
 QUESTA_SIM = vsim
-QUESTA_RUN_OPTS = -c \
-                  -do "run -all; quit" \
+QUESTA_RUN_OPTS = -coverage \
+                  -c \
+                  -do "log -r /*; coverage save -onexit -assert -directive -cvg -codeall coverage/$(TEST)_coverage.ucdb; run -all; quit" \
                   +UVM_TESTNAME=$(TEST) \
                   +UVM_VERBOSITY=$(UVM_VERBOSITY) \
                   -l sim_$(TEST).log \
@@ -193,7 +200,7 @@ run_basic:
 run_basic_read:
 	$(MAKE) sim TEST=basic_read_test
 
-run_protocol_test:
+run_protocol:
 	$(MAKE) sim TEST=protocol_test
 
 run_wstrb:
@@ -211,6 +218,24 @@ run_stress:
 run_regression:
 	$(MAKE) sim TEST=regression_test
 
+run_unaligned_addr:
+	$(MAKE) sim TEST=unaligned_addr_test
+
+run_invalid_addr:
+	$(MAKE) sim TEST=invalid_addr_test
+
+run_led_irq:
+	$(MAKE) sim TEST=led_irq_test
+
+run_only_OKAY_resp:
+	$(MAKE) sim TEST=only_OKAY_resp_test
+
+run_addr_out_of_range:
+	$(MAKE) sim TEST=addr_out_of_range_test
+
+run_outstanding:
+	$(MAKE) sim TEST=outstanding_test
+
 
 #------------------------------------------------------------------------------
 # Coverage Targets
@@ -220,12 +245,15 @@ cov: cov_$(SIM)
 
 cov_VCS:
 	@echo "Generating coverage report..."
-	cd $(SIM_DIR) && urg -dir simv.vdb -report $(SIM_DIR)/coverage
-	@echo "Coverage report generated in $(SIM_DIR)/coverage"
+	cd $(SIM_DIR) && urg -dir coverage.vdb -report coverage/covhtml
+##	cd $(SIM_DIR) && urg -dir ./*.vdb -dbname coverage/merged.vdb
+##	cd $(SIM_DIR) && urg -dir coverage/merged.vdb -report coverage/covhtml
+	@echo "Coverage report generated in $(SIM_DIR)/coverage/covhtml"
 
 cov_QUESTA:
 	@echo "Generating coverage report..."
-	cd $(SIM_DIR) && vcover report -html $(SIM_DIR)/coverage
+	cd $(SIM_DIR) && vcover merge coverage/merged.ucdb coverage/*.ucdb
+	cd $(SIM_DIR) && vcover report -html coverage/merged.ucdb -htmldir coverage/covhtml
 	@echo "Coverage report generated in $(SIM_DIR)/coverage"
 
 #------------------------------------------------------------------------------

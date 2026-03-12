@@ -1,0 +1,321 @@
+Command: /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/./simv +UVM_TESTNAME=led_irq_test +UVM_VERBOSITY=UVM_MEDIUM -l sim_led_irq_test.log +ntb_random_seed=1773212876
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version Q-2020.03-SP2-8_Full64; Runtime version Q-2020.03-SP2-8_Full64;  Mar 11 12:37 2026
+UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+VCD+ Writer Q-2020.03-SP2-8_Full64 Copyright (c) 1991-2020 by Synopsys Inc.
+UVM_INFO @ 0: reporter [RNTST] Running test led_irq_test...
+UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+------------------------------------------------------------------
+Name                       Type                        Size  Value
+------------------------------------------------------------------
+uvm_test_top               led_irq_test                -     @342 
+  tb_env                   env                         -     @358 
+    axi_agt                axi_agent                   -     @367 
+      driver               axi_driver                  -     @414 
+        rsp_port           uvm_analysis_port           -     @433 
+        seq_item_port      uvm_seq_item_pull_port      -     @423 
+      monitor              axi_monitor                 -     @405 
+        analysis_port      uvm_analysis_port           -     @582 
+      sequencer            axi_sequencer               -     @443 
+        rsp_export         uvm_analysis_export         -     @452 
+        seq_item_export    uvm_seq_item_pull_imp       -     @570 
+        arbitration_queue  array                       0     -    
+        lock_queue         array                       0     -    
+        num_last_reqs      integral                    32    'd1  
+        num_last_rsps      integral                    32    'd1  
+    cov                    coverage_collector          -     @385 
+      analysis_imp         uvm_analysis_imp            -     @394 
+    scb                    scoreboard                  -     @376 
+      axi_fifo             uvm_tlm_analysis_fifo #(T)  -     @598 
+        analysis_export    uvm_analysis_imp            -     @647 
+        get_ap             uvm_analysis_port           -     @637 
+        get_peek_export    uvm_get_peek_imp            -     @617 
+        put_ap             uvm_analysis_port           -     @627 
+        put_export         uvm_put_imp                 -     @607 
+------------------------------------------------------------------
+
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/tests.sv(49) @ 95000: uvm_test_top [led_irq_test] Applying reset
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/axi_driver.sv(38) @ 95000: uvm_test_top.tb_env.axi_agt.driver [axi_driver] Reset detected - resetting all signals
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/tests.sv(53) @ 195000: uvm_test_top [led_irq_test] Reset released
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/axi_driver.sv(57) @ 195000: uvm_test_top.tb_env.axi_agt.driver [axi_driver] Reset deasserted - ready to drive
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(444) @ 245000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] Starting led_irq_sequence (deassert check only)
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 315000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000045
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 315000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 475000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 485000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x45, IRQ status=0x0, write_val=0x45
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 555000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000082
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 555000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 715000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 725000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x82, IRQ status=0x0, write_val=0x82
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 795000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000c7
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 795000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 955000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 965000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xc7, IRQ status=0x0, write_val=0xc7
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 1035000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000019
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 1035000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 1195000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 1205000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x19, IRQ status=0x0, write_val=0x19
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 1275000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000fb
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 1275000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 1435000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 1445000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xfb, IRQ status=0x0, write_val=0xfb
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 1515000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000fc
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 1515000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 1675000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 1685000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xfc, IRQ status=0x0, write_val=0xfc
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 1755000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000b3
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 1755000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 1915000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 1925000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xb3, IRQ status=0x0, write_val=0xb3
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 1995000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000003f
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 1995000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 2155000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 2165000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x3f, IRQ status=0x0, write_val=0x3f
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 2235000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000c7
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 2235000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 2395000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 2405000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xc7, IRQ status=0x0, write_val=0xc7
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 2475000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000009c
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 2475000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 2635000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 2645000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x9c, IRQ status=0x0, write_val=0x9c
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 2715000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000f9
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 2715000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 2875000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 2885000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xf9, IRQ status=0x0, write_val=0xf9
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 2955000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000005a
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 2955000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 3115000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 3125000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x5a, IRQ status=0x0, write_val=0x5a
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 3195000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000a8
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 3195000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 3355000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 3365000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xa8, IRQ status=0x0, write_val=0xa8
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 3435000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000d8
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 3435000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 3595000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 3605000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xd8, IRQ status=0x0, write_val=0xd8
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 3675000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000090
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 3675000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 3835000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 3845000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x90, IRQ status=0x0, write_val=0x90
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 3915000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000009f
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 3915000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 4075000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 4085000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x9f, IRQ status=0x0, write_val=0x9f
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 4155000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000a1
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 4155000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 4315000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 4325000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xa1, IRQ status=0x0, write_val=0xa1
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 4395000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000040
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 4395000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 4555000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 4565000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x40, IRQ status=0x0, write_val=0x40
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 4635000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000b0
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 4635000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 4795000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 4805000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xb0, IRQ status=0x0, write_val=0xb0
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 4875000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000086
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 4875000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 5035000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 5045000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x86, IRQ status=0x0, write_val=0x86
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 5115000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000006b
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 5115000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 5275000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 5285000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x6b, IRQ status=0x0, write_val=0x6b
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 5355000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000004c
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 5355000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 5515000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 5525000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x4c, IRQ status=0x0, write_val=0x4c
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 5595000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000a0
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 5595000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 5755000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 5765000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xa0, IRQ status=0x0, write_val=0xa0
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 5835000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000ba
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 5835000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 5995000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 6005000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xba, IRQ status=0x0, write_val=0xba
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 6075000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000017
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 6075000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 6235000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 6245000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x17, IRQ status=0x0, write_val=0x17
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 6315000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000007b
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 6315000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 6475000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 6485000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x7b, IRQ status=0x0, write_val=0x7b
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 6555000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000082
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 6555000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 6715000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 6725000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x82, IRQ status=0x0, write_val=0x82
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 6795000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000bb
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 6795000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 6955000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 6965000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xbb, IRQ status=0x0, write_val=0xbb
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 7035000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000030
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 7035000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 7195000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 7205000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x30, IRQ status=0x0, write_val=0x30
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 7275000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000065
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 7275000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 7435000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 7445000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x65, IRQ status=0x0, write_val=0x65
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 7515000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000d2
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 7515000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 7675000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 7685000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xd2, IRQ status=0x0, write_val=0xd2
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 7755000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000080
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 7755000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 7915000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 7925000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x80, IRQ status=0x0, write_val=0x80
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 7995000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000055
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 7995000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 8155000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 8165000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x55, IRQ status=0x0, write_val=0x55
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 8235000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000004d
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 8235000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 8395000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 8405000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x4d, IRQ status=0x0, write_val=0x4d
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 8475000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000032
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 8475000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 8635000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 8645000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x32, IRQ status=0x0, write_val=0x32
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 8715000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000a3
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 8715000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 8875000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 8885000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xa3, IRQ status=0x0, write_val=0xa3
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 8955000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000a5
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 8955000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 9115000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 9125000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xa5, IRQ status=0x0, write_val=0xa5
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 9195000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000008a
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 9195000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 9355000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 9365000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x8a, IRQ status=0x0, write_val=0x8a
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 9435000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000028
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 9435000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 9595000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 9605000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x28, IRQ status=0x0, write_val=0x28
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 9675000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000096
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 9675000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 9835000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 9845000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x96, IRQ status=0x0, write_val=0x96
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 9915000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000009f
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 9915000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 10075000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 10085000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x9f, IRQ status=0x0, write_val=0x9f
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 10155000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000045
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 10155000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 10315000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 10325000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x45, IRQ status=0x0, write_val=0x45
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 10395000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000ba
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 10395000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 10555000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 10565000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xba, IRQ status=0x0, write_val=0xba
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 10635000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x000000d7
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 10635000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 10795000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 10805000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0xd7, IRQ status=0x0, write_val=0xd7
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 10875000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000057
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 10875000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 11035000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 11045000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x57, IRQ status=0x0, write_val=0x57
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 11115000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000001f
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 11115000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 11275000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 11285000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x1f, IRQ status=0x0, write_val=0x1f
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 11355000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000021
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 11355000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 11515000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 11525000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x21, IRQ status=0x0, write_val=0x21
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 11595000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x0000004b
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 11595000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 11755000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 11765000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x4b, IRQ status=0x0, write_val=0x4b
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 11835000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000011
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 11835000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 11995000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 12005000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x11, IRQ status=0x0, write_val=0x11
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(70) @ 12075000: uvm_test_top.tb_env.scb [scoreboard] REF: LED_REG = 0x00000041
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(115) @ 12075000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Write response is OKAY
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(135) @ 12235000: uvm_test_top.tb_env.scb [scoreboard] CHECK PASSED: Read data matched. Got=0x00000000, Exp=0x00000000
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv(452) @ 12245000: uvm_test_top.tb_env.axi_agt.sequencer@@seq [led_irq_sequence] LED=0x41, IRQ status=0x0, write_val=0x41
+UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 17245000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(159) @ 17245000: uvm_test_top.tb_env.scb [scoreboard] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(160) @ 17245000: uvm_test_top.tb_env.scb [scoreboard]     SCOREBOARD FINAL REPORT
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(161) @ 17245000: uvm_test_top.tb_env.scb [scoreboard] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(162) @ 17245000: uvm_test_top.tb_env.scb [scoreboard] Total Transactions: 100
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(163) @ 17245000: uvm_test_top.tb_env.scb [scoreboard] Passed Checks:      100
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(164) @ 17245000: uvm_test_top.tb_env.scb [scoreboard] Failed Checks:      0
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(167) @ 17245000: uvm_test_top.tb_env.scb [scoreboard] *** TEST PASSED ***
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv(171) @ 17245000: uvm_test_top.tb_env.scb [scoreboard] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(209) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(210) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector]     FUNCTIONAL COVERAGE REPORT
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(211) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(212) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector] Register Access Coverage:  66.67%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(213) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector] WSTRB Coverage:            23.81%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(214) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector] LED Pattern Coverage:      33.33%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(215) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector] Seven-Segment Coverage:    0.00%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(216) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector] IRQ Coverage:              16.67%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(217) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector] Response Coverage:         50.00%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(218) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector] ========================================
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(219) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector] TOTAL COVERAGE:            31.75%
+UVM_INFO /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv(220) @ 17245000: uvm_test_top.tb_env.cov [coverage_collector] ========================================
+UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 17245000: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_report_server.svh(894) @ 17245000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  230
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+[axi_driver]     2
+[coverage_collector]    12
+[led_irq_sequence]    51
+[led_irq_test]     2
+[scoreboard]   158
+
+$finish called from file "/hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time             17245000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 17245000 ps
+CPU Time:      1.010 seconds;       Data structure size:   0.6Mb
+Wed Mar 11 12:37:59 2026

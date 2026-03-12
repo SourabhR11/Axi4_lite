@@ -1,0 +1,7 @@
+tb_top.dut.W_ADDR1
+tb_top.dut.W_DATA2
+tb_top.dut.W_IDLE0
+tb_top.dut.W_RESP3
+tb_top.dut.R_ADDR1
+tb_top.dut.R_DATA2
+tb_top.dut.R_IDLE0

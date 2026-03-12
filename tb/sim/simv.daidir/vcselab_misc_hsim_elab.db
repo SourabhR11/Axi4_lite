@@ -612,7 +612,7 @@ fHsimMdbPartInputLimit             	1
 fHsimSdfData                       	0
 fHsimDesignHasSdfAnnotation        	0
 fHsimDesignUsesParallelVcs         	0
-fHsimCMEnabled                     	0
+fHsimCMEnabled                     	1
 fHsimNotDelRefData                 	0
 fGblPulsePartCtrl                  	0
 fGblMSah                           	0
@@ -1348,6 +1348,6 @@ fFgpDynelabFix                     	1
 fFgpEdgeSanity                     	0
 fHsimCongruencyConfigFile          	0
 fHsimCongruencyLogFile             	0
-fHsimCoverageEnabled               	0
-fHsimCoverageOptions               	0
-fHsimCoverageDir                   	NULL
+fHsimCoverageEnabled               	1
+fHsimCoverageOptions               	407
+fHsimCoverageDir                   	coverage.vdb

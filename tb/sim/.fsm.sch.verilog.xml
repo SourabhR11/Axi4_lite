@@ -1,0 +1,11 @@
+<Command name="schRTLInfo"  delimiter="."  >
+<RTLBlock >
+<RTLInfo   name="w_state_0"  type="2"  fileName="/hwetools/work_area/frontend/sourabhrao/Axi4_lite/rtl/axi_ledseg_irq.v"  >
+    <Seg beginLine="72"  endLine="89"  />
+  </RTLInfo>
+<RTLInfo   name="r_state_1"  type="2"  fileName="/hwetools/work_area/frontend/sourabhrao/Axi4_lite/rtl/axi_ledseg_irq.v"  >
+    <Seg beginLine="73"  endLine="102"  />
+  </RTLInfo>
+<Instance name="tb_top.dut"  />
+</RTLBlock>
+</Command>

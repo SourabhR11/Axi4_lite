@@ -322,92 +322,6 @@ class stress_test extends base_test;
     
 endclass : stress_test
 
-
-// Full Regression Test
-class regression_test extends base_test;
-    
-    `uvm_component_utils(regression_test)
-    
-    function new(string name = "regression_test", uvm_component parent = null);
-        super.new(name, parent);
-    endfunction
-    
-    virtual task run_phase(uvm_phase phase);
-        reset_sequence        seq_rst;
-        basic_write_sequence  seq_wr;
-        basic_read_sequence   seq_rd;
-        wstrb_sequence        seq_strb;
-        irq_gen_sequence      seq_irq;
-        irq_multiple_sequence seq_irq_mult;
-        concurrent_rw_sequence seq_conc;
-        random_sequence       seq_rand;
-        
-        phase.raise_objection(this);
-        
-        `uvm_info(get_type_name(), "========================================", UVM_LOW)
-        `uvm_info(get_type_name(), "   STARTING FULL REGRESSION TEST", UVM_LOW)
-        `uvm_info(get_type_name(), "========================================", UVM_LOW)
-        
-        apply_reset();
-        
-        // Test 1: Reset verification
-        `uvm_info(get_type_name(), "Running: Reset Test", UVM_LOW)
-        seq_rst = reset_sequence::type_id::create("seq_rst");
-        seq_rst.start(tb_env.axi_agt.sequencer);
-        #500ns;
-        
-        // Test 2: Basic writes
-        `uvm_info(get_type_name(), "Running: Basic Write Test", UVM_LOW)
-        seq_wr = basic_write_sequence::type_id::create("seq_wr");
-        seq_wr.start(tb_env.axi_agt.sequencer);
-        #500ns;
-        
-        // Test 3: Basic reads
-        `uvm_info(get_type_name(), "Running: Basic Read Test", UVM_LOW)
-        seq_rd = basic_read_sequence::type_id::create("seq_rd");
-        seq_rd.start(tb_env.axi_agt.sequencer);
-        #500ns;
-        
-        // Test 4: WSTRB test
-        `uvm_info(get_type_name(), "Running: WSTRB Test", UVM_LOW)
-        seq_strb = wstrb_sequence::type_id::create("seq_strb");
-        seq_strb.start(tb_env.axi_agt.sequencer);
-        #1000ns;
-        
-        // Test 5: IRQ generation
-        `uvm_info(get_type_name(), "Running: IRQ Generation Test", UVM_LOW)
-        seq_irq = irq_gen_sequence::type_id::create("seq_irq");
-        seq_irq.start(tb_env.axi_agt.sequencer);
-        #1000ns;
-        
-        // Test 6: Multiple IRQ cycles
-        `uvm_info(get_type_name(), "Running: Multiple IRQ Cycles Test", UVM_LOW)
-        seq_irq_mult = irq_multiple_sequence::type_id::create("seq_irq_mult");
-        seq_irq_mult.start(tb_env.axi_agt.sequencer);
-        #2000ns;
-        
-        // Test 7: Concurrent operations
-        `uvm_info(get_type_name(), "Running: Concurrent R/W Test", UVM_LOW)
-        seq_conc = concurrent_rw_sequence::type_id::create("seq_conc");
-        seq_conc.start(tb_env.axi_agt.sequencer);
-        #2000ns;
-        
-        // Test 8: Random stress test
-        `uvm_info(get_type_name(), "Running: Random Stress Test", UVM_LOW)
-        seq_rand = random_sequence::type_id::create("seq_rand");
-        assert(seq_rand.randomize() with {num_transactions == 200;});
-        seq_rand.start(tb_env.axi_agt.sequencer);
-        #5000ns;
-        
-        `uvm_info(get_type_name(), "========================================", UVM_LOW)
-        `uvm_info(get_type_name(), "   REGRESSION TEST COMPLETED", UVM_LOW)
-        `uvm_info(get_type_name(), "========================================", UVM_LOW)
-        
-        phase.drop_objection(this);
-    endtask
-    
-endclass : regression_test
-
 // Unaligned Address Access
 class unaligned_addr_test extends base_test;
   `uvm_component_utils(unaligned_addr_test)
@@ -560,3 +474,136 @@ class outstanding_test extends base_test;
   endtask
 
 endclass : outstanding_test
+
+
+// Full Regression Test
+class regression_test extends base_test;
+    
+    `uvm_component_utils(regression_test)
+    
+    function new(string name = "regression_test", uvm_component parent = null);
+        super.new(name, parent);
+    endfunction
+    
+    virtual task run_phase(uvm_phase phase);
+        reset_sequence        seq_rst;
+        basic_write_sequence  seq_wr;
+        basic_read_sequence   seq_rd;
+        wstrb_sequence        seq_strb;
+        irq_gen_sequence      seq_irq;
+        irq_multiple_sequence seq_irq_mult;
+        concurrent_rw_sequence seq_conc;
+        random_sequence       seq_rand;
+        unaligned_addr_sequence seq_unaligned; 
+        invalid_addr_sequence seq_invalid;
+        led_irq_sequence seq_led_irq;
+        only_OKAY_resp_sequence seq_only_okay;
+        addr_out_of_range_sequence seq_out_of_range;
+        outstanding_sequence seq_outstanding;
+
+
+
+
+        phase.raise_objection(this);
+        
+        `uvm_info(get_type_name(), "========================================", UVM_LOW)
+        `uvm_info(get_type_name(), "   STARTING FULL REGRESSION TEST", UVM_LOW)
+        `uvm_info(get_type_name(), "========================================", UVM_LOW)
+        
+        apply_reset();
+        
+        // Test 1: Reset verification
+        `uvm_info(get_type_name(), "Running: Reset Test", UVM_LOW)
+        seq_rst = reset_sequence::type_id::create("seq_rst");
+        seq_rst.start(tb_env.axi_agt.sequencer);
+        #500ns;
+        
+        // Test 2: Basic writes
+        `uvm_info(get_type_name(), "Running: Basic Write Test", UVM_LOW)
+        seq_wr = basic_write_sequence::type_id::create("seq_wr");
+        seq_wr.start(tb_env.axi_agt.sequencer);
+        #500ns;
+        
+        // Test 3: Basic reads
+        `uvm_info(get_type_name(), "Running: Basic Read Test", UVM_LOW)
+        seq_rd = basic_read_sequence::type_id::create("seq_rd");
+        seq_rd.start(tb_env.axi_agt.sequencer);
+        #500ns;
+        
+        // Test 4: WSTRB test
+        `uvm_info(get_type_name(), "Running: WSTRB Test", UVM_LOW)
+        seq_strb = wstrb_sequence::type_id::create("seq_strb");
+        seq_strb.start(tb_env.axi_agt.sequencer);
+        #1000ns;
+        
+        // Test 5: IRQ generation
+        `uvm_info(get_type_name(), "Running: IRQ Generation Test", UVM_LOW)
+        seq_irq = irq_gen_sequence::type_id::create("seq_irq");
+        seq_irq.start(tb_env.axi_agt.sequencer);
+        #1000ns;
+        
+        // Test 6: Multiple IRQ cycles
+        `uvm_info(get_type_name(), "Running: Multiple IRQ Cycles Test", UVM_LOW)
+        seq_irq_mult = irq_multiple_sequence::type_id::create("seq_irq_mult");
+        seq_irq_mult.start(tb_env.axi_agt.sequencer);
+        #2000ns;
+        
+        // Test 7: Concurrent operations
+        `uvm_info(get_type_name(), "Running: Concurrent R/W Test", UVM_LOW)
+        seq_conc = concurrent_rw_sequence::type_id::create("seq_conc");
+        seq_conc.start(tb_env.axi_agt.sequencer);
+        #2000ns;
+        
+        // Test 8: Random stress test
+        `uvm_info(get_type_name(), "Running: Random Stress Test", UVM_LOW)
+        seq_rand = random_sequence::type_id::create("seq_rand");
+        assert(seq_rand.randomize() with {num_transactions == 200;});
+        seq_rand.start(tb_env.axi_agt.sequencer);
+        #5000ns;
+
+         // Test 9: Unaligned addr test
+        `uvm_info(get_type_name(), "Running: Unaligned addr Test", UVM_LOW)
+        seq_unaligned = unaligned_addr_sequence::type_id::create("seq_unaligned");
+        seq_unaligned.start(tb_env.axi_agt.sequencer);
+        #5000ns;
+        
+         // Test 10: Invalid addr test
+        `uvm_info(get_type_name(), "Running: Invalid addr Test", UVM_LOW)
+        seq_invalid= invalid_addr_sequence::type_id::create("seq_invalid");
+        seq_invalid.start(tb_env.axi_agt.sequencer);
+        #5000ns;
+
+          // Test 11: led_irq addr test
+        `uvm_info(get_type_name(), "Running: Led irq Test", UVM_LOW)
+        seq_led_irq = led_irq_sequence::type_id::create("seq_led_irq");
+        seq_led_irq.start(tb_env.axi_agt.sequencer);
+        #5000ns;
+
+          // Test 12: Unaligned addr test
+        `uvm_info(get_type_name(), "Running: Only OKAY Test", UVM_LOW)
+        seq_only_okay = only_OKAY_resp_sequence::type_id::create("seq_only_okay");
+        seq_only_okay.start(tb_env.axi_agt.sequencer);
+        #5000ns;
+
+         // Test 13: Unaligned addr test
+        `uvm_info(get_type_name(), "Running: addr out of range Test", UVM_LOW)
+        seq_out_of_range = addr_out_of_range_sequence::type_id::create("seq_out_of_range");
+        seq_out_of_range.start(tb_env.axi_agt.sequencer);
+        #5000ns;
+
+         // Test 14: Unaligned addr test
+        `uvm_info(get_type_name(), "Running: outstanding Test", UVM_LOW)
+        seq_outstanding = outstanding_sequence::type_id::create("seq_outtanding");
+        seq_outstanding.start(tb_env.axi_agt.sequencer);
+        #5000ns;
+             
+        `uvm_info(get_type_name(), "========================================", UVM_LOW)
+        `uvm_info(get_type_name(), "   REGRESSION TEST COMPLETED", UVM_LOW)
+        `uvm_info(get_type_name(), "========================================", UVM_LOW)
+        
+        phase.drop_objection(this);
+    endtask
+    
+endclass : regression_test
+
+

@@ -1,6 +1,6 @@
-<session version="1.1" release="Q-2020.03-SP2-8" timestp="2026-03-05 09:34:57 GMT">
+<session version="1.1" release="Q-2020.03-SP2-8" timestp="2026-03-10 10:20:39 GMT">
   <info>
-    <attr name="datetime" value="Thu Mar  5 16:21:38 2026
+    <attr name="datetime" value="Tue Mar 10 16:13:20 2026
 "/>
     <attr name="command" value="urg -dir simv.vdb -report ./sim/coverage"/>
   </info>
@@ -11,28 +11,28 @@
   </hvp>
   <old_coverage>
   <scope type="top" name="top">
-    <metric name="Group" value="14.6825%" />
+    <metric name="Group" value="63.2936%" />
   </scope>
   <scope type="instance" name="top">
   </scope>
   <scope type="group" name="top">
-    <scope type="group" name="tb_pkg::coverage_collector::cg_led_patterns">
-      <metric name="Group" value="0%" />
-    </scope>
     <scope type="group" name="tb_pkg::coverage_collector::cg_sevenseg_patterns">
-      <metric name="Group" value="0%" />
-    </scope>
-    <scope type="group" name="tb_pkg::coverage_collector::cg_irq">
-      <metric name="Group" value="0%" />
-    </scope>
-    <scope type="group" name="tb_pkg::coverage_collector::cg_wstrb">
-      <metric name="Group" value="4.7619%" />
-    </scope>
-    <scope type="group" name="tb_pkg::coverage_collector::cg_register_access">
-      <metric name="Group" value="33.3333%" />
+      <metric name="Group" value="8.33333%" />
     </scope>
     <scope type="group" name="tb_pkg::coverage_collector::cg_response">
       <metric name="Group" value="50%" />
+    </scope>
+    <scope type="group" name="tb_pkg::coverage_collector::cg_led_patterns">
+      <metric name="Group" value="66.6667%" />
+    </scope>
+    <scope type="group" name="tb_pkg::coverage_collector::cg_wstrb">
+      <metric name="Group" value="71.4286%" />
+    </scope>
+    <scope type="group" name="tb_pkg::coverage_collector::cg_irq">
+      <metric name="Group" value="83.3333%" />
+    </scope>
+    <scope type="group" name="tb_pkg::coverage_collector::cg_register_access">
+      <metric name="Group" value="100%" />
     </scope>
   </scope>
   <scope type="assert" name="Statistics">
