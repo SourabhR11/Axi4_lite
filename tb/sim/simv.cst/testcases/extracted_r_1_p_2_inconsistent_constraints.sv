@@ -18,7 +18,7 @@ program p_1_2;
     initial
         begin
             obj = new;
-            randState = "01x001zx00z111z010zz1xxz0xzxxxz1zxzxxxzzxxxxxzxzzzxxzzzxxzzxzzxx";
+            randState = "1z11zz100zxx00xxzz1z11xx0z0xxz0zzxxzxxzxzxxxzzxxxzxzxxzzxzzzzzzx";
             obj.set_randstate(randState);
             obj.randomize();
         end

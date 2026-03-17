@@ -39,8 +39,8 @@ gui_set_state_value -category Layout -key child_source_size_x -value 1305
 gui_set_state_value -category Layout -key child_source_size_y -value 783
 gui_set_state_value -category Layout -key child_watch_size_x -value 1053
 gui_set_state_value -category Layout -key child_watch_size_y -value 179
-gui_set_state_value -category Layout -key child_wave_colname -value 199
-gui_set_state_value -category Layout -key child_wave_colvalue -value 174
+gui_set_state_value -category Layout -key child_wave_colname -value 186
+gui_set_state_value -category Layout -key child_wave_colvalue -value 187
 gui_set_state_value -category Layout -key child_wave_docknewline -value false
 gui_set_state_value -category Layout -key child_wave_left -value 377
 gui_set_state_value -category Layout -key child_wave_pos_x -value {-2}
@@ -91,81 +91,73 @@ gui_wv_zoom_timerange -id  Wave.1 0 299
 gui_wv_zoom_timerange -id  Wave.1 0 299
 gui_list_expand -id  Hier.1   tb_top
 gui_list_select -id Hier.1 -current_item_name tb_top.axi_vif -current_item_type Scope  -selected  { tb_top.axi_vif   }
-gui_list_select -id Data.1 -selected  { tb_top.axi_vif.awvalid   }
+gui_list_select -id Data.1 -selected  { tb_top.axi_vif.rst_n   }
 gui_list_select_all -id Data.1
 gui_list_add -id Wave.1 -from Data.1 { tb_top.axi_vif.assert_awvalid_stable tb_top.axi_vif.assert_wvalid_stable tb_top.axi_vif.assert_arvalid_stable tb_top.axi_vif.assert_bvalid_until_bready tb_top.axi_vif.assert_rvalid_until_rready tb_top.axi_vif.clk tb_top.axi_vif.rst_n {tb_top.axi_vif.awaddr[31:0]} tb_top.axi_vif.awvalid tb_top.axi_vif.awready {tb_top.axi_vif.wdata[31:0]} {tb_top.axi_vif.wstrb[3:0]} tb_top.axi_vif.wvalid tb_top.axi_vif.wready tb_top.axi_vif.bready tb_top.axi_vif.bvalid {tb_top.axi_vif.bresp[1:0]} {tb_top.axi_vif.araddr[31:0]} tb_top.axi_vif.arvalid tb_top.axi_vif.arready tb_top.axi_vif.rready {tb_top.axi_vif.rdata[31:0]} tb_top.axi_vif.rvalid {tb_top.axi_vif.rresp[1:0]} {tb_top.axi_vif.led_out[7:0]} {tb_top.axi_vif.sevenseg_out[7:0]} tb_top.axi_vif.irq_out {tb_top.axi_vif.$unit} } -insertionbar
-gui_marker_move -id  Wave.1 C1 213
+gui_marker_move -id  Wave.1 C1 49
 gui_zoom -window Wave.1 -full
-gui_wv_zoom_timerange -id  Wave.1 58575 3038558
-gui_wv_zoom_timerange -id  Wave.1 63051 1450170
-gui_wv_zoom_timerange -id  Wave.1 233246 383080
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollleft -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_wv_scrollright -id  Wave.1  line
-gui_view_port_history -window Wave.1 -previous
-gui_view_port_history -window Wave.1 -previous
-gui_wv_scrollleft -id  Wave.1  line
+gui_wv_zoom_timerange -id  Wave.1 587305 25327533
+gui_wv_zoom_timerange -id  Wave.1 909162 8430412
+gui_wv_zoom_timerange -id  Wave.1 954813 2579671
+gui_wv_zoom_timerange -id  Wave.1 971658 1107364
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 3556
 gui_wv_scrollleft -id  Wave.1  line
 gui_wv_scrollleft -id  Wave.1  line
 gui_view_port_history -window Wave.1 -previous
 gui_view_port_history -window Wave.1 -previous
-gui_view_port_history -window Wave.1 -previous
-gui_wv_scrollleft -id  Wave.1  line
-gui_view_port_history -window Wave.1 -previous
+gui_zoom -window  Wave.1  -factor 0.5
+gui_zoom -window  Wave.1  -factor 0.5
+gui_zoom -window  Wave.1  -factor 0.5
+gui_marker_move -id  Wave.1 C1 265000
+gui_wv_zoom_timerange -id  Wave.1 859572 1019155
+gui_marker_move -id  Wave.1 C1 955000
+gui_list_select -id Wave.1 -selected  { tb_top.axi_vif.awready   }
+gui_marker_move -id  Wave.1 C1 868999
+gui_list_expand -id  Wave.1   {tb_top.axi_vif.led_out[7:0]}
 gui_list_select -id Data.1 -selected  {  }
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_marker_move -id  Wave.1 C1 955000
+gui_marker_move -id  Wave.1 C1 945000
+gui_marker_move -id  Wave.1 C1 936528
+gui_marker_move -id  Wave.1 C1 935640
+gui_marker_select -id  Wave.1 { C1 }
+gui_marker_move -id  Wave.1 C1 934396
+gui_marker_move -id  Wave.1 C1 935000
+gui_marker_move -id  Wave.1 C1 945000
+gui_marker_move -id  Wave.1 C1 925000
+gui_marker_move -id  Wave.1 C1 935000
+gui_marker_move -id  Wave.1 C1 925000
+gui_marker_move -id  Wave.1 C1 930000
+gui_marker_move -id  Wave.1 C1 935000
+gui_marker_move -id  Wave.1 C1 945000
+gui_marker_move -id  Wave.1 C1 935000
+gui_marker_move -id  Wave.1 C1 945000
+gui_wv_zoom_timerange -id  Wave.1 940438 960519
+gui_zoom -window  Wave.1  -factor 0.5
+gui_zoom -window  Wave.1  -factor 2
+gui_zoom -window  Wave.1  -full
+gui_wv_zoom_timerange -id  Wave.1 6386943 16371130
+gui_wv_zoom_timerange -id  Wave.1 7282453 9039136
+gui_wv_zoom_timerange -id  Wave.1 7433625 7807263
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 7445000
+gui_wv_zoom_timerange -id  Wave.1 7404107 7478169
+gui_zoom -window  Wave.1  -factor 0.5
+gui_marker_move -id  Wave.1 C1 7415000
+gui_marker_move -id  Wave.1 C1 7425000
+gui_view_port_history -window Wave.1 -previous
+gui_zoom -window  Wave.1  -full
+gui_wv_zoom_timerange -id  Wave.1 2496047 12773886
+gui_wv_zoom_timerange -id  Wave.1 2929985 5688292
+gui_wv_zoom_timerange -id  Wave.1 2976391 3538496
+gui_wv_zoom_timerange -id  Wave.1 2983914 3052143
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line

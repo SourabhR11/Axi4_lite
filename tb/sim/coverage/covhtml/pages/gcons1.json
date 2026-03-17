@@ -1,0 +1,15 @@
+var g_db_data = [
+{dummy:0},
+{name:'cg_register_access',f:1,type:6,id:1529,tb:'11',h:'11',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/tb_pkg/coverage_collector',parent:'1524'},
+{name:'cg_wstrb',f:1,type:6,id:1537,tb:'23',h:'13',m:'10',hp:'56.52%',cov:['71.42%','Y'],g:'100.00%',gp:['71.42%','Y'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/tb_pkg/coverage_collector',parent:'1524'},
+{name:'cg_led_patterns',f:1,type:6,id:1545,tb:'6',h:'5',m:'1',hp:'83.33%',cov:['83.33%','Y'],g:'100.00%',gp:['83.33%','Y'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/tb_pkg/coverage_collector',parent:'1524'},
+{name:'cg_sevenseg_patterns',f:1,type:6,id:1549,tb:'12',h:'1',m:'11',hp:'8.33%',cov:['8.33%','R'],g:'100.00%',gp:['8.33%','R'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/tb_pkg/coverage_collector',parent:'1524'},
+{name:'cg_irq',f:1,type:6,id:1553,tb:'5',h:'4',m:'1',hp:'80.00%',cov:['83.33%','Y'],g:'100.00%',gp:['83.33%','Y'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/tb_pkg/coverage_collector',parent:'1524'},
+{name:'cg_response',f:1,type:6,id:1561,tb:'5',h:'5',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/tb_pkg/coverage_collector',parent:'1524'},
+{name:'cg_register_access',f:1,type:6,id:2395,tb:'11',h:'11',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','true']],hdlPath:'work.tb_pkg::coverage_collector',parent:'2390'},
+{name:'cg_wstrb',f:1,type:6,id:2403,tb:'23',h:'13',m:'10',hp:'56.52%',cov:['71.42%','Y'],g:'100.00%',gp:['71.42%','Y'],opts:[[],['merge_instance','true']],hdlPath:'work.tb_pkg::coverage_collector',parent:'2390'},
+{name:'cg_led_patterns',f:1,type:6,id:2411,tb:'6',h:'5',m:'1',hp:'83.33%',cov:['83.33%','Y'],g:'100.00%',gp:['83.33%','Y'],opts:[[],['merge_instance','true']],hdlPath:'work.tb_pkg::coverage_collector',parent:'2390'},
+{name:'cg_sevenseg_patterns',f:1,type:6,id:2415,tb:'12',h:'1',m:'11',hp:'8.33%',cov:['8.33%','R'],g:'100.00%',gp:['8.33%','R'],opts:[[],['merge_instance','true']],hdlPath:'work.tb_pkg::coverage_collector',parent:'2390'},
+{name:'cg_irq',f:1,type:6,id:2419,tb:'5',h:'4',m:'1',hp:'80.00%',cov:['83.33%','Y'],g:'100.00%',gp:['83.33%','Y'],opts:[[],['merge_instance','true']],hdlPath:'work.tb_pkg::coverage_collector',parent:'2390'},
+{name:'cg_response',f:1,type:6,id:2427,tb:'5',h:'5',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','true']],hdlPath:'work.tb_pkg::coverage_collector',parent:'2390'}];
+processConsCovergroupsData(g_db_data);

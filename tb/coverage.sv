@@ -130,9 +130,9 @@ class coverage_collector extends uvm_subscriber #(axi_transaction);
         
         cp_resp: coverpoint resp {
             bins okay   = {2'b00};
-            bins exokay = {2'b01};
-            bins slverr = {2'b10};
-            bins decerr = {2'b11};
+            ignore_bins exokay = {2'b01};
+            ignore_bins slverr = {2'b10};
+            ignore_bins decerr = {2'b11};
         }
         
         cp_trans_type: coverpoint is_write {

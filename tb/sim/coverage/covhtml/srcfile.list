@@ -1,0 +1,13 @@
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/rtl/axi_ledseg_irq.v
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/axi_driver.sv
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/axi_if.sv
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/axi_monitor.sv
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/axi_sequencer_agent.sv
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/axi_transaction.sv
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/env.sv
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/tb_pkg.sv
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/tb_top.sv
+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/tests.sv

@@ -1,6 +1,6 @@
 # Begin_DVE_Session_Save_Info
 # DVE full session
-# Saved on Thu Mar 12 10:01:47 2026
+# Saved on Tue Mar 17 14:09:23 2026
 # Designs open: 1
 #   V1: /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sim/dump.vpd
 # Toplevel windows open: 1
@@ -206,7 +206,7 @@ gui_change_stack_mode -mode list
 # Post database loading setting...
 
 # Restore C1 time
-gui_set_time -C1_only 213
+gui_set_time -C1_only 275000
 
 
 
@@ -240,6 +240,8 @@ gui_view_scroll -id ${Hier.1} -horizontal -set 0
 gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Data.1} -text {*}
 gui_list_show_data -id ${Data.1} {tb_top.axi_vif}
+gui_show_window -window ${Data.1}
+catch { gui_list_select -id ${Data.1} {tb_top.axi_vif.wready }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0
@@ -261,8 +263,9 @@ gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
 gui_marker_set_ref -id ${Wave.1}  C1
-gui_wv_zoom_timerange -id ${Wave.1} 284651 434485
+gui_wv_zoom_timerange -id ${Wave.1} 246838 325302
 gui_list_add_group -id ${Wave.1} -after {New Group} {Group1}
+gui_list_select -id ${Wave.1} {tb_top.axi_vif.bready }
 gui_seek_criteria -id ${Wave.1} {Any Edge}
 
 
@@ -280,7 +283,7 @@ gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linka
 gui_list_set_filter -id ${Wave.1} -text {*}
 gui_list_set_insertion_bar  -id ${Wave.1} -group Group1  -position in
 
-gui_marker_move -id ${Wave.1} {C1} 213
+gui_marker_move -id ${Wave.1} {C1} 275000
 gui_view_scroll -id ${Wave.1} -vertical -set 0
 gui_show_grid -id ${Wave.1} -enable false
 # Restore toplevel window zorder
@@ -288,7 +291,6 @@ gui_show_grid -id ${Wave.1} -enable false
 if {[gui_exist_window -window ${TopLevel.1}]} {
 	gui_set_active_window -window ${TopLevel.1}
 	gui_set_active_window -window ${Wave.1}
-	gui_set_active_window -window ${DLPane.1}
 }
 #</Session>
 

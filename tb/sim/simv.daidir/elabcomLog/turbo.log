@@ -2,4 +2,4 @@ Command Line: /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/bin/
 uname(Linux HweServer.mirafra.com 3.10.0-1160.42.2.el7.x86_64 #1 SMP Tue Sep 7 14:49:57 UTC 2021 x86_64)
 [INFO] error/warning message 'C00388' has been suppressed.
 [INFO] error/warning message 'C00389' has been suppressed.
-au time 1.248689 0.409914 0.053371 delta 110940160 110940160 total 217559040 217559040
+au time 0.863069 0.420990 0.070191 delta 110944256 110944256 total 217563136 217563136

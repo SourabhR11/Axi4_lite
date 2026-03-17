@@ -13,7 +13,7 @@ module tb_top;
     
     // Clock and Reset
     logic clk;
-  //  logic rst_n;
+    logic rst_n;
     
     // Clock Generation (100 MHz -> 10ns period)
     initial begin

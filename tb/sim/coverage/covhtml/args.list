@@ -1,0 +1,4 @@
+-html
+coverage/merged.ucdb
+-htmldir
+coverage/covhtml

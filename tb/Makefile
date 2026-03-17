@@ -39,16 +39,15 @@ VCS_OPTS = -sverilog \
            -lca \
            -ntb_opts uvm-1.2 \
            +vcs+lic+wait \
-           -cm line+cond+fsm+tgl+branch+assert \
-           -cm_dir coverage \
+           +cover=bcstf \
+           +incdir+$(TB_DIR) \
            -l compile.log
 
 VCS_RUN_OPTS = +UVM_TESTNAME=$(TEST) \
                +UVM_VERBOSITY=$(UVM_VERBOSITY) \
-               +ntb_random_seed=$(SEED) \
-               -cm_name $(TEST)_coverage \
-               -cm_dir coverage \
-               -l sim_$(TEST).log
+               +cover \
+               -l sim_$(TEST).log \
+               +ntb_random_seed=$(SEED)
 
 #------------------------------------------------------------------------------
 # Questa Options
@@ -245,10 +244,8 @@ cov: cov_$(SIM)
 
 cov_VCS:
 	@echo "Generating coverage report..."
-	cd $(SIM_DIR) && urg -dir coverage.vdb -report coverage/covhtml
-##	cd $(SIM_DIR) && urg -dir ./*.vdb -dbname coverage/merged.vdb
-##	cd $(SIM_DIR) && urg -dir coverage/merged.vdb -report coverage/covhtml
-	@echo "Coverage report generated in $(SIM_DIR)/coverage/covhtml"
+	cd $(SIM_DIR) && urg -dir simv.vdb -report $(SIM_DIR)/coverage
+	@echo "Coverage report generated in $(SIM_DIR)/coverage"
 
 cov_QUESTA:
 	@echo "Generating coverage report..."

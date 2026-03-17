@@ -617,12 +617,13 @@
 0 uvm_verdi_pli.svh
 0 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/systemverilog/uvm_verdi_pli.svh
 0 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/vcs/uvm_verdi_pli.svh
-54
+51
 +define+UVM_VCS_RECORD
 +define+UVM_VERDI_VIF_RECORD
 +incdir+/hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/
 +incdir+/hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/vcs
 +incdir+/hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/verdi
++incdir+/hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb
 +itf+/hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/vcsdp_lite.tab
 +vcs+lic+wait
 +vcsd1
@@ -646,8 +647,6 @@
 -Mxllcflags=
 -P
 -Xufe=2steps
--cm
--cm_dir
 -debug_access+all
 -fsdb
 -full64
@@ -665,8 +664,6 @@ compile.log
 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv
 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv
 uvm-1.2
-line+cond+fsm+tgl+branch+assert
-coverage
 /hwetools/synosys/installed_tools/verdi/Q-2020.03-SP2-8/share/PLI/VCS/LINUX64/verdi.tab
 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/rtl/axi_ledseg_irq.v
 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/axi_if.sv
@@ -740,11 +737,11 @@ DC_HOME=/hwetools/synosys/installed_tools/syn/S-2021.06-SP4
 DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ogHHrZEvHJ,guid=acae1cb66d97f3b4f10bd326695e25ca
 COLORTERM=truecolor
 0
-181
+180
 1773305625 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/tests.sv
 1773051696 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/sequences.sv
 1772701544 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/env.sv
-1772701544 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv
+1773731844 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/coverage.sv
 1772701544 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/scoreboard.sv
 1772701544 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/axi_sequencer_agent.sv
 1772701544 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/axi_monitor.sv
@@ -911,7 +908,7 @@ COLORTERM=truecolor
 1631418287 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/macros/uvm_global_defines.svh
 1631418287 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/macros/uvm_version_defines.svh
 1631418288 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/uvm_macros.svh
-1773211059 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/tb_top.sv
+1773683381 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/tb_top.sv
 1773211441 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/tb_pkg.sv
 1772701544 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/tb/axi_if.sv
 1772701303 /hwetools/work_area/frontend/sourabhrao/Axi4_lite/rtl/axi_ledseg_irq.v
@@ -919,7 +916,6 @@ COLORTERM=truecolor
 1631418287 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv
 1631418287 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv
 1631418288 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/etc/uvm-1.2/uvm_pkg.sv
-1631416236 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/include/cm_vcsd.tab
 1630405584 /hwetools/synosys/installed_tools/verdi/Q-2020.03-SP2-8/share/PLI/VCS/LINUX64/verdi.tab
 1631416234 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/vcsdp_lite.tab
 6
@@ -929,5 +925,5 @@ COLORTERM=truecolor
 1631416743 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/liberrorinf.so
 1631416702 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libsnpsmalloc.so
 1631416739 /hwetools/synosys/installed_tools/vcs/Q-2020.03-SP2-8/linux64/lib/libvfs.so
-1773305654 simv.daidir
+1773735754 simv.daidir
 -1 partitionlib
